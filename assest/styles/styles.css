@@ -1,0 +1,208 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Lugrasimo&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Add this CSS in your styles.css file */
+.logo-container {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.logo-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: navy;
+
+    font-family: 'Lugrasimo', cursive;
+}
+
+/* Add this CSS in your styles.css file */
+
+/* Navbar Styles */
+.navbar {
+    background-color: navy;
+    color: #fff;
+}
+
+/* Hero Section Styles */
+/* Add this CSS in your styles.css file */
+.hero {
+    background: url('../images/chillarz\ image\ 6.PNG') center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 0px 3px 2px #333;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0px 2px 1px #333;
+  }
+  /* Add this CSS in your styles.css file */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: navy; /* Primary blue color */
+    color: #fff; /* Text color */
+    text-decoration: none;
+   
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0D47A1; /* Darker blue color on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .btn-primary {
+      font-size: 1rem;
+    }
+  }
+  
+
+/* About Section Styles */
+.about-chillarz {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .gap-8 {
+    gap: 2rem;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .about-text {
+    max-width: 600px;
+  }
+  
+  .about-images img {
+    max-width: 100%;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+/* Restaurant Section Styles */
+.restaurant {
+    padding: 60px 0;
+  }
+
+  /* Add this CSS in your styles.css file */
+.testimonials {
+    background-color: #f9f9f9;
+  }
+  
+  .testimonial-cards {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+  }
+  
+  .testimonial-cards::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 640px) {
+    .grid-cols-1 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+/* Bar & Lounge Section Styles */
+.bar-lounge {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+  
+  /* Responsive Styles */
+  @media (max-width: 640px) {
+    .sm\:grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+/* Club Section Styles */
+.club {
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* Lodging Section Styles */
+.lodging {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* Contact Section Styles */
+#contact {
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: navy;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Button Styles */
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Adjust other section styles for smaller screens as needed */
+}
