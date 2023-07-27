@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Lugrasimo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+.food-card {
+  background: rgb(225, 225, 254);
+}
+
+.logo-container {
+  text-align: center;
+  background: navy;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #eee;
+  font-family: "Lugrasimo", cursive;
+}
+
+/* Add a new CSS class for hiding elements */
+.hidden {
+    display: none;
+  }
+  
+
+p {
+  @apply text-sm;
+}
+
+.food-card {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .food-card.hide-card {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+/* Hide the "See More" section initially */
+.see-more-section {
+  display: none;
+}
+
+/* Style for the "See More" card */
+.see-more-card {
+  background-color: #f0f0f0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.see-more-card{
+    min-height: 240px;
+}

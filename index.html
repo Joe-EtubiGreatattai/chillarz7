@@ -8,32 +8,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Lugrasimo&display=swap");
-      .logo-container {
-        text-align: center;
-        margin: 5px auto;
-      }
-
-      .logo-text {
-        font-size: 20px;
-        font-weight: bold;
-        color: navy;
-        font-family: "Lugrasimo", cursive;
-      }
-
-      p {
-      @apply text-sm;
-    }
-    </style>
+    <link rel="stylesheet" href="assest/styles/menu.css" />
   </head>
-
   <body>
     <div class="logo-container">
       <h2 class="logo-text">Chillarz 7 Menu</h2>
     </div>
     <div class="container mx-auto">
-      <div class="sticky top-0 bg-white py-1 px-8 mb-8">
+      <div class="sticky top-0 bg-white shadow-md py-3 px-8 mb-8">
         <input
           type="text"
           id="searchBar"
@@ -42,302 +24,54 @@
         />
       </div>
 
-      <h2 class="text-2xl font-bold mb-4 text-center w-full">Foods (Main Course)</h2>
+      <!-- Foods Section -->
+      <h2 class="text-2xl font-bold mb-4 text-center w-full">
+        Foods (Main Course)
+      </h2>
       <div class="grid grid-cols-2 gap-4" id="foods">
-        <!-- Food Card 1 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/food1.jpg"
-            alt="Food 1"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Delicious Dish 1</h3>
-            <p class="text-gray-600">Price: &#8358;1500</p>
-            <p class="text-gray-600">Ready Time: 15 mins</p>
+        <!-- Food Cards will be generated here -->
+        <!-- See More Card for Foods Section -->
+        <div
+          class="food-card see-more-card bg-white rounded-lg shadow-md see-more-card flex items-center justify-center"
+          onclick="toggleSeeMore('foods')"
+        >
+          <div class="p-8">
+            <h3 class="text-lg font-semibold mb-2">See More</h3>
           </div>
         </div>
-
-        <!-- Add more food cards here -->
-        <!-- Food Card 2 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/food2.jpg"
-            alt="Food 2"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Tasty Meal 2</h3>
-            <p class="text-gray-600">Price: &#8358;1800</p>
-            <p class="text-gray-600">Ready Time: 20 mins</p>
-          </div>
-        </div>
-
-        <!-- Add more food cards here -->
-        <!-- Food Card 3 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/food3.jpg"
-            alt="Food 3"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Yummy Cuisine 3</h3>
-            <p class="text-gray-600">Price: &#8358;2100</p>
-            <p class="text-gray-600">Ready Time: 18 mins</p>
-          </div>
-        </div>
-        <!-- Food Card 3 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/food4.jpg"
-            alt="Food 3"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Yummy Cuisine 3</h3>
-            <p class="text-gray-600">Price: &#8358;2100</p>
-            <p class="text-gray-600">Ready Time: 18 mins</p>
-          </div>
-        </div>
-        <!-- Food Card 3 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/food5.jpg"
-            alt="Food 3"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Yummy Cuisine 3</h3>
-            <p class="text-gray-600">Price: &#8358;2100</p>
-            <p class="text-gray-600">Ready Time: 18 mins</p>
-          </div>
-        </div>
-        <!-- Food Card 3 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/food6.jpg"
-            alt="Food 3"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Yummy Cuisine 3</h3>
-            <p class="text-gray-600">Price: &#8358;2100</p>
-            <p class="text-gray-600">Ready Time: 18 mins</p>
-          </div>
-        </div>
-        <!-- Food Card 3 -->
-
-        <!-- Add more food cards here -->
       </div>
 
+      <!-- Fast Food Section -->
       <h2 class="text-2xl font-bold my-8 text-center w-full">Fast Food</h2>
       <div class="grid grid-cols-2 gap-4" id="fastFood">
-        <!-- Fast Food Card 1 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/pizza.jpg"
-            alt="Fast Food 1"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Quick Snack 1</h3>
-            <p class="text-gray-600">Price: &#8358;800</p>
-            <p class="text-gray-600">Ready Time: 10 mins</p>
+        <!-- Fast Food Cards will be generated here -->
+        <!-- See More Card for Fast Food Section -->
+        <div
+          class="food-card bg-white rounded-lg shadow-md see-more-card flex items-center justify-center"
+          onclick="toggleSeeMore('fastFood')"
+        >
+          <div class="p-8">
+            <h3 class="text-lg font-semibold mb-2">See More</h3>
           </div>
         </div>
-
-        <!-- Add more fast food cards here -->
-        <!-- Fast Food Card 2 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/burger.webp"
-            alt="Fast Food 2"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Crunchy Bites 2</h3>
-            <p class="text-gray-600">Price: &#8358;650</p>
-            <p class="text-gray-600">Ready Time: 8 mins</p>
-          </div>
-        </div>
-        <!-- Add more fast food cards here -->
-        <!-- Fast Food Card 2 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/fish.jpg"
-            alt="Fast Food 2"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Crunchy Bites 2</h3>
-            <p class="text-gray-600">Price: &#8358;650</p>
-            <p class="text-gray-600">Ready Time: 8 mins</p>
-          </div>
-        </div>
-        <!-- Fast Food Card 3 -->
-
-        <!-- Add more fast food cards here -->
-      </div>
-      <h2 class="text-2xl font-bold my-8 text-center w-full">Dinks</h2>
-      <div class="grid grid-cols-2 gap-4" id="drinks">
-        <!-- Drink Card 1 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/Hollandia.jpg"
-            alt="Drink 1"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Hollandia</h3>
-            <p class="text-gray-600">Price: &#8358;2,500</p>
-            <p class="text-gray-600">Ready Time: 5 mins</p>
-          </div>
-        </div>
-
-        <!-- Add more drink cards here -->
-        <!-- Drink Card 2 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/CH-EXOTIC-1-LTR-1024x1024.jpg"
-            alt="Drink 2"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Chi Exotic</h3>
-            <p class="text-gray-600">Price: &#8358;1,500</p>
-            <p class="text-gray-600">Ready Time: 3 mins</p>
-          </div>
-        </div>
-
-        <!-- Add more drink cards here -->
-        <!-- Drink Card 3 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/5alive.jpeg"
-            alt="Drink 3"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">5 alive</h3>
-            <p class="text-gray-600">Price: &#8358;1,800</p>
-            <p class="text-gray-600">Ready Time: 2 mins</p>
-          </div>
-        </div>
-
-        <!-- Add more drink cards here -->
       </div>
 
-      <h2 class="text-2xl font-bold my-8 text-center w-full">Wines</h2>
+      <!-- Drinks Section -->
+      <h2 class="text-2xl font-bold my-8 text-center w-full">Drinks</h2>
       <div class="grid grid-cols-2 gap-4" id="drinks">
-        <!-- Drink Card 1 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/ciroc.jpg"
-            alt="Drink 1"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Refreshing Drink 1</h3>
-            <p class="text-gray-600">Price: &#8358;300</p>
-            <p class="text-gray-600">Ready Time: 5 mins</p>
+        <!-- Drink Cards will be generated here -->
+        <!-- See More Card for Drinks Section -->
+        <div
+          class="food-card bg-white rounded-lg shadow-md see-more-card flex items-center justify-center"
+          onclick="toggleSeeMore('drinks')"
+        >
+          <div class="p-8">
+            <h3 class="text-lg font-semibold mb-2">See More</h3>
           </div>
         </div>
-
-        <!-- Add more drink cards here -->
-        <!-- Drink Card 2 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/hum.webp"
-            alt="Drink 2"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Cool Beverage 2</h3>
-            <p class="text-gray-600">Price: &#8358;250</p>
-            <p class="text-gray-600">Ready Time: 3 mins</p>
-          </div>
-        </div>
-
-        <!-- Add more drink cards here -->
-        <!-- Drink Card 3 -->
-        <div class="food-card bg-white rounded-lg shadow-md">
-          <img
-            src="assest/images/henessy.jpeg"
-            alt="Drink 3"
-            class="w-full h-48 object-cover rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Sparkling Soda 3</h3>
-            <p class="text-gray-600">Price: &#8358;180</p>
-            <p class="text-gray-600">Ready Time: 2 mins</p>
-          </div>
-        </div>
-
-        <!-- Add more drink cards here -->
       </div>
     </div>
 
-    <script>
-      const searchBar = document.getElementById("searchBar");
-
-      searchBar.addEventListener("input", function () {
-        const searchTerm = searchBar.value.toLowerCase();
-
-        // Filter cards in the foods section
-        const foodCards = document.querySelectorAll("#foods .food-card");
-        foodCards.forEach((card) => {
-          const foodName = card.querySelector("h3").textContent.toLowerCase();
-          if (foodName.includes(searchTerm)) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
-
-        // Filter cards in the fast food section
-        const fastFoodCards = document.querySelectorAll("#fastFood .food-card");
-        fastFoodCards.forEach((card) => {
-          const foodName = card.querySelector("h3").textContent.toLowerCase();
-          if (foodName.includes(searchTerm)) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
-
-        // Filter cards in the drinks section
-        const drinkCards = document.querySelectorAll("#drinks .food-card");
-        drinkCards.forEach((card) => {
-          const foodName = card.querySelector("h3").textContent.toLowerCase();
-          if (foodName.includes(searchTerm)) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
-
-        // Show appropriate message if no matches found in a section
-        const sections = ["foods", "fastFood", "drinks"];
-        sections.forEach((section) => {
-          const sectionCards = document.querySelectorAll(
-            `#${section} .food-card`
-          );
-          const visibleCards = Array.from(sectionCards).filter(
-            (card) => card.style.display !== "none"
-          );
-          const sectionTitle = document.querySelector(`h2.${section}`);
-          const noMatchText = sectionTitle.nextElementSibling;
-
-          if (visibleCards.length === 0) {
-            sectionTitle.style.display = "none";
-            noMatchText.style.display = "block";
-          } else {
-            sectionTitle.style.display = "block";
-            noMatchText.style.display = "none";
-          }
-        });
-      });
-    </script>
+    <script src="assest/script/menu.js"></script>
   </body>
 </html>
