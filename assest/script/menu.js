@@ -34,6 +34,24 @@ const sectionsData = {
         price: "&#8358;800",
         readyTime: "10 mins",
       },
+      {
+        imageSrc: "assest/images/burger.webp",
+        name: "Quick Snack 1",
+        price: "&#8358;800",
+        readyTime: "10 mins",
+      },
+      {
+        imageSrc: "assest/images/pizza.jpg",
+        name: "Quick Snack 1",
+        price: "&#8358;800",
+        readyTime: "10 mins",
+      },
+      {
+        imageSrc: "assest/images/burger.webp",
+        name: "Quick Snack 1",
+        price: "&#8358;800",
+        readyTime: "10 mins",
+      },
       // Add more fast food data objects here
     ],
     drinks: [
@@ -99,9 +117,7 @@ const sectionsData = {
       const searchTerm = searchBar.value.toLowerCase();
       sections.forEach((section) => {
         const sectionData = sectionsData[section];
-        const foodCards = document.getElementById(section).querySelectorAll(".food-card:not(.see-more-card)");
-        const seeMoreCard = document.getElementById(section).querySelector(".see-more-card");
-        const seeMoreSection = document.getElementById(section).querySelector(".see-more-section");
+        const foodCards = document.getElementById(section).querySelectorAll(".food-card");
         const sectionEmptyMessage = document.getElementById(`${section}-empty`);
   
         let sectionIsEmpty = true;
@@ -123,6 +139,9 @@ const sectionsData = {
         }
   
         // Show/hide the "See More" card based on the search term
+        const seeMoreCard = document.getElementById(section).querySelector(".see-more-card");
+        const seeMoreSection = document.getElementById(section).querySelector(".see-more-section");
+  
         if (showSeeMoreCard) {
           seeMoreCard.classList.remove("hidden"); // Remove the 'hidden' class
           seeMoreSection.classList.remove("hidden"); // Remove the 'hidden' class
@@ -140,6 +159,7 @@ const sectionsData = {
       });
     });
   }
+  
   
   document.addEventListener("DOMContentLoaded", initializeSections);
   
